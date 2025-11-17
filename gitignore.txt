@@ -1,0 +1,6 @@
+configs
+dataset
+.DS_Store
+tensorboard
+models
+submission.csv
