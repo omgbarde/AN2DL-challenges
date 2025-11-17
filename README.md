@@ -68,7 +68,7 @@ A straightforward baseline approach using fully connected neural networks for pa
 ---
 
 #### 2. **The Layered Pain** (`the_layered_pain.ipynb`)
-A hierarchical, CNN-based approach implementing two-stage classification for improved pain detection.
+A hierarchical, -based approach implementing two-stage classification for improved pain detection.
 
 **Approach:**
 - **Data Preparation**: 
@@ -78,7 +78,7 @@ A hierarchical, CNN-based approach implementing two-stage classification for imp
   - Sequence construction with optimal window parameters
   
 - **Architecture Design**:
-  - Stage 1 Model: CNN layers for temporal feature extraction followed by classification
+  - Stage 1 Model: RNN layers for temporal feature extraction followed by classification
   - Stage 2 Model: Specialized network trained on pain samples only
   - Dropout and batch normalization for regularization
   
@@ -99,7 +99,7 @@ An ensemble learning approach combining multiple diverse architectures for robus
 
 **Approach:**
 - Train 5 different neural network models:
-  - Different architectures (MLP, CNN variants, LSTM)
+  - Different architectures (GRU, LSTM)
   - Different hyperparameters and initialization strategies
   - Different training procedures and data augmentations
   
@@ -193,51 +193,9 @@ Each notebook includes comprehensive visualizations:
 
 ---
 
-## 🚀 How to Run
-
-### Prerequisites
-```bash
-pip install torch numpy pandas scikit-learn matplotlib seaborn tensorboard
-```
-
-### Execution
-1. **Baseline Model**:
-   - Open `the_normie.ipynb` in Jupyter or VS Code
-   - Run all cells sequentially
-   - Check TensorBoard for training visualization
-
-2. **Hierarchical Model**:
-   - Open `the_layered_pain.ipynb`
-   - Execute cells to train Stage 1 and Stage 2 models
-   - Analyze two-stage predictions
-
-3. **Ensemble Model**:
-   - Open `jury_of_five.ipynb`
-   - Train all 5 base models
-   - Observe voting consensus and final predictions
-
----
-
-## 📝 Key Insights
-
-1. **Class Imbalance Handling**: Two-stage classification effectively addresses the class imbalance problem
-2. **Temporal Patterns**: CNN architectures effectively capture motion patterns in skeletal data
-3. **Ensemble Robustness**: Diverse models outperform single architectures, especially on edge cases
-4. **Normalization Importance**: Proper feature scaling is critical for stable training
-5. **Data Leakage Prevention**: User-stratified splits ensure test set independence
-
----
-
 ## 📜 Full Report
 
-For comprehensive technical details including:
-- Mathematical formulations
-- Detailed architecture diagrams
-- Complete experimental results
-- Statistical analysis
-- Ablation studies
-
-See the [full report](challenge1_report.pdf) available in this directory.
+For comprehensive technical details see the [full report](challenge1_report.pdf) available in this directory.
 
 ---
 
@@ -248,14 +206,3 @@ See the [full report](challenge1_report.pdf) available in this directory.
 - Lorenzo Moretti
 - Luca Zani
 
----
-
-## 📚 References
-
-- PyTorch Documentation: https://pytorch.org/docs/stable/index.html
-- Deep Learning Best Practices for Time Series: https://arxiv.org/abs/1903.04467
-- Ensemble Learning Methods: https://scikit-learn.org/stable/modules/ensemble.html
-
----
-
-Feel free to explore the repository and contribute with suggestions or improvements!
