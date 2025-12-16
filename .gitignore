@@ -1,5 +1,8 @@
 configs
+.vscode
 challenge1/dataset
+challenge2/dataset
+challenge2/preprocessed
 .DS_Store
 tensorboard
 models

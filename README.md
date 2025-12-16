@@ -1,23 +1,34 @@
-# Pirate Pain Detection using Deep Learning
+# AN2DL Challenges using Deep Learning
 
-This project involves **pain level classification from skeletal joint motion data** using advanced neural network architectures to detect and differentiate pain levels in video sequences.
+This project involves **deep learning techniques** for two distinct classification challenges: pain detection from skeletal motion data and medical image classification.
 
-## 📌 Project Objective
+## 📌 Project Objectives
 
-The goal of this challenge is to build a deep learning model that can classify pain levels based on skeletal joint features extracted from video sequences. The task involves:
+### Challenge 1: Pirate Pain Detection
+Classify pain levels based on skeletal joint motion sequences using hierarchical classification:
+- Processing multivariate time-series data from skeletal joints
+- Implementing multi-stage classification (no pain vs. low pain vs. high pain)
+- Training multiple neural network architectures (MLP, CNN, ensemble methods)
 
-- **Data Processing**: Loading and preprocessing multivariate time-series data from skeletal joints
-- **Feature Engineering**: Extracting and normalizing joint motion features
-- **Multi-stage Classification**: Implementing hierarchical classification to distinguish pain levels:
-  - **Stage 1**: Binary classification (no pain vs. pain)
-  - **Stage 2**: Binary classification on pain samples (low pain vs. high pain)
-- **Model Development**: Training multiple neural network architectures:
-  - **The Normie (Baseline)**: Fully connected neural networks with temporal windowing
-  - **The Layered Pain (CNN-based)**: Convolutional neural networks for spatial-temporal feature extraction
-  - **Jury of Five (Ensemble)**: Multiple diverse models combined for robust predictions
-- **Performance Evaluation**: Assessing accuracy, precision, recall, F1-score, and confusion matrices
+### Challenge 2: Medical Image Classification
+Classify medical images using transfer learning and ensemble methods:
+- Preprocessing and augmenting medical image datasets
+- Fine-tuning pre-trained models (EfficientNetB0, Phikon)
+- Building ensemble models for improved accuracy
+
+## 📁 Repository Structure
+- **challenge1/** - Pain detection implementation (the_normie, the_layered_pain, jury_of_five notebooks)
+- **challenge2/** - Medical image classification (EfficientNetB0, Phikon, ensemble notebooks)
+- **requirements.txt** - Required Python packages
+
+
+## 📜 Full Reports
+For detailed methodology, architectures, and results:
+- Challenge 1: See notebooks in [challenge1/](challenge1/)
+- Challenge 2: See notebooks in [challenge2/](challenge2/)
 
 ---
+<<<<<<< HEAD
 
 ## 📊 Dataset Overview
 
@@ -206,3 +217,6 @@ For comprehensive technical details see the [full report](challenge1_report.pdf)
 - Lorenzo Moretti
 - Luca Zani
 
+=======
+Feel free to explore the repository and contribute with suggestions or improvements!
+>>>>>>> fbc5da9 (added second challenge material)
